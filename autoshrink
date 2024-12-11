@@ -5,10 +5,10 @@
 while true
 do
 
-  for file in lzo_init.c lzo_conf.h  lzoconf.h  lzodefs.h  lzo_func.h  lzo_supp.h
+  for file in main.c  lzo_supp.h
   do 
 
-    SHRINKFILE=$file shrinkray ./run.sh $file --formatter=none --trivial-is-not-error --timeout 600
+    SHRINKFILE=$file shrinkray ./run.sh $file --formatter=none --trivial-is-not-error --timeout 100
 
   done
 
