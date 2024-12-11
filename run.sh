@@ -4,7 +4,7 @@ shopt -s inherit_errexit
 
 if [[ "$PWD" != ~/test/ltest ]]
 then
-  for file in lzo_init.c lzo_conf.h  lzoconf.h  lzodefs.h  lzo_func.h  lzo_supp.h main.c
+  for file in lzo_supp.h main.c
     do
     if [[ "$SHRINKFILE" != "$file" ]]
     then
@@ -15,7 +15,7 @@ fi
 
 rm -f genlog
 
-clang -o main -fcoverage-mapping -fprofile-instr-generate main.c lzo_init.c  -I .
+clang -o main -fcoverage-mapping -fprofile-instr-generate main.c -I .
 
 LLVM_PROFILE_FILE='main.profraw' ./main
 
