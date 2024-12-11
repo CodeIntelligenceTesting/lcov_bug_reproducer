@@ -8,16 +8,14 @@ then
   cp ~/test/ltest/lzoconf.h .
   cp ~/test/ltest/lzodefs.h .
   cp ~/test/ltest/lzo_func.h .
-#  cp ~/test/ltest/lzo_init.c .
-  cp ~/test/ltest/lzo_ptr.h .
+  cp ~/test/ltest/lzo_init.c .
   cp ~/test/ltest/lzo_supp.h .
-  cp ~/test/ltest/lzo_util.c .
   cp ~/test/ltest/main.c .
 fi
 
 rm -f genlog
 
-clang -o main -fcoverage-mapping -fprofile-instr-generate main.c lzo_init.c lzo_util.c  -I .
+clang -o main -fcoverage-mapping -fprofile-instr-generate main.c lzo_init.c  -I .
 
 LLVM_PROFILE_FILE='main.profraw' ./main
 

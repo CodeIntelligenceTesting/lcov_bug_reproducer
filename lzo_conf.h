@@ -291,7 +291,7 @@ do *dest++ = *src++; while (--len > 0)
 /***********************************************************************
 ************************************************************************/
 LZO_EXTERN(const lzo_bytep) lzo_copyright(void);
-#include "lzo_ptr.h"
+
 /* Generate compressed data in a deterministic way.
 * This is fully portable, and compression can be faster as well.
 * A reason NOT to be deterministic is when the block size is
