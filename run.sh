@@ -4,8 +4,8 @@ shopt -s inherit_errexit
 
 if [[ "$PWD" != ~/test/ltest ]]
 then
-#  cp ~/test/ltest/lzo_conf.h .
-  cp ~/test/ltest/lzoconf.h .
+  cp ~/test/ltest/lzo_conf.h .
+#  cp ~/test/ltest/lzoconf.h .
   cp ~/test/ltest/lzodefs.h .
   cp ~/test/ltest/lzo_dll.ch .
   cp ~/test/ltest/lzo_func.h .
