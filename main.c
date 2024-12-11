@@ -1,7 +1,7 @@
 #define FOO();
 
 void foobar() {
-   #include "lzo_supp.h"
+   #include "supp.h"
 }
 
 int main(){}

@@ -26,4 +26,4 @@ llvm-cov export -format=lcov -instr-profile=main.profdata main > main.lcov
 genhtml main.lcov 2> genlog || true
 
 grep -q 'genhtml: ERROR: (range)' genlog
-grep -q 'lzo_supp.h contains only' genlog
+grep -q 'supp.h contains only' genlog
