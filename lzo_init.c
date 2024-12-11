@@ -1,46 +1,6 @@
-/* lzo_init.c -- initialization of the LZO library
-
-   This file is part of the LZO real-time data compression library.
-
-   Copyright (C) 1996-2017 Markus Franz Xaver Johannes Oberhumer
-   All Rights Reserved.
-
-   The LZO library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU General Public License as
-   published by the Free Software Foundation; either version 2 of
-   the License, or (at your option) any later version.
-
-   The LZO library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-   GNU General Public License for more details.
-
-   You should have received a copy of the GNU General Public License
-   along with the LZO library; see the file COPYING.
-   If not, write to the Free Software Foundation, Inc.,
-   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
-
-   Markus F.X.J. Oberhumer
-   <markus@oberhumer.com>
-   http://www.oberhumer.com/opensource/lzo/
- */
 
 
 #include "lzo_conf.h"
-
-
-/***********************************************************************
-// Runtime check of the assumptions about the size of builtin types,
-// memory model, byte order and other low-level constructs.
-//
-// We are really paranoid here - LZO should either fail
-// at startup or not at all.
-//
-// Because of inlining much of these functions evaluates to nothing.
-//
-// And while many of the tests seem highly obvious and redundant they are
-// here to catch compiler/optimizer bugs. Yes, these do exist.
-************************************************************************/
 
 #if !defined(__LZO_IN_MINILZO)
 
